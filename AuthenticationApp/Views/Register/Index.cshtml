@@ -1,0 +1,35 @@
+﻿@model AuthenticationApp.Models.UserRegisterViewModel
+<div class="container mt-5">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-sm-12 col-md-12 col-lg-4">
+            <h1 class="mb-3">Kayıt Ol</h1>
+            <form method="post">
+                <div asp-validation-summary="All" class="text-danger">
+                </div>
+                <div class="mb-3" class="form-group">
+                    <label>Ad</label>
+                    @*eğer kullanıcı kısmını boş bırakırsa required kısmı devreye girecek.*@
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                    <input type="text" asp-for="Name" class="form-control" />
+                    <label>Soyad</label>
+                    <span asp-validation-for="Surname" class="text-danger"></span>
+                    <input type="text" asp-for="Surname" class="form-control" />
+                    <label>Kullanıcı Adı</label>
+                    <span asp-validation-for="UserName" class="text-danger"></span>
+                    <input type="text" asp-for="UserName" class="form-control" />
+                    <label>Mail</label>
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                    <input type="text" asp-for="Email" class="form-control" />
+                    <label>Şifre</label>
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                    <input type="text" asp-for="Password" class="form-control" />
+                    <label>Şifre Tekrar</label>
+                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                    <input type="text" asp-for="ConfirmPassword" class="form-control" />
+                </div>
+                <button type="submit" class="btn btn-primary mr-2">Kayıt Ol</button>
+            </form>
+        </div>
+    </div>
+</div>
+
